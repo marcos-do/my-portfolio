@@ -22,16 +22,30 @@ body {
 h1 {
   font-weight: 700;
   font-size: 32px;
-  animation: appear 0.8s linear 0.8s;
+  animation: appear-transform 0.8s linear 0.8s;
 }
 
-@keyframes appear {
+main p {
+  opacity: 0;
+  animation: appear 2s linear 1.5s forwards;
+}
+
+@keyframes appear-transform {
   from {
     transform: translateX(-128px);
     opacity: 0.25;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }
