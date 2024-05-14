@@ -22,7 +22,7 @@ body {
 h1 {
   font-weight: 700;
   font-size: 32px;
-  animation: appear-transform 0.8s linear 0.8s;
+  animation: appear-transform linear 0.8s;
 }
 
 main p {
