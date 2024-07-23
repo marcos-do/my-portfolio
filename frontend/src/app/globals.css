@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: black;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: white;
+}
+
+.dark-theme {
+  --foreground-rgb: white;
+  --background-end-rgb: black;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: white;
+  color: var(--foreground-rgb);
+  background: var(--background-end-rgb);
 }
 
 @layer utilities {

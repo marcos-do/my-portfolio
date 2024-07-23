@@ -1,3 +1,5 @@
+"use server"
+
 import { getDescription } from "@/app/services/descriptionService";
 
 async function getData(): Promise<any> {
