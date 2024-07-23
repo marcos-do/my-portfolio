@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import StickyThemeButton from "./components/buttons/StickyThemeButton";
 import "./globals.css";
+import { THEME_KEY } from "./constants/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}<StickyThemeButton /></body>
+      <body className={inter.className}>
+        {children}
+        <StickyThemeButton />
+      </body>
     </html>
   );
 }
