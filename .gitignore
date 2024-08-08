@@ -39,3 +39,7 @@ next-env.d.ts
 #python
 __pycache__
 my_env
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
