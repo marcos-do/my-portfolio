@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, ComponentProps } from "react";
 import styles from "./buttons.module.css";
 import { DARK_THEME_CLASS, THEME_KEY } from "@/app/constants/theme";
 
@@ -12,7 +12,7 @@ const getThemeValue = () => {
   return localStorage.getItem(THEME_KEY);
 };
 
-const StickyThemeButton: React.FC = () => {
+const StickyThemeButton: React.FC<ComponentProps<'button'>> = () => {
 
   const addDarkTheme = () => {
     const root = document.documentElement;
