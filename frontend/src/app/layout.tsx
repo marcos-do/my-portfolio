@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import StickyMenu from "./components/menus/StickyMenu";
-import SunIcon from "@/app/assets/sun_icon.svg";
-import MoonIcon from "@/app/assets/half_moon_icon.svg";
 import TextButton from "./components/buttons/TextButton";
 import Image from "next/image";
+import { DARK_THEME_CLASS, THEME_KEY } from "@/app/constants/theme";
 
 const inter = Roboto({ weight: "400", subsets: ["latin"] });
 
@@ -14,11 +13,32 @@ export const metadata: Metadata = {
   description: "Portfolio Marcos de Oliveira",
 };
 
+const updateThemeValue = (value: string) => {
+  localStorage.setItem(THEME_KEY, value);
+};
+
+const getThemeValue = () => {
+  return localStorage.getItem(THEME_KEY);
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const changeToLightTheme = () => {
+    "use client"
+    const root = document.documentElement;
+    root.classList.remove(DARK_THEME_CLASS);
+    updateThemeValue("");
+  };
+
+  const changeToDarkTheme = () => {
+    "use client"
+    const root = document.documentElement;
+    root.classList.add(DARK_THEME_CLASS);
+    updateThemeValue(DARK_THEME_CLASS);
+  };
   return (
     <html lang="es">
       <body className={inter.className}>
@@ -28,12 +48,7 @@ export default function RootLayout({
           document.documentElement.classList.add(localStorage.THEME)
         </script>
         <StickyMenu>
-          <TextButton>
-            <Image src={SunIcon} alt="Light theme"></Image>
-          </TextButton>
-          <TextButton>
-            <Image src={MoonIcon} alt="Dark theme"></Image>
-          </TextButton>
+          
         </StickyMenu>
       </body>
     </html>

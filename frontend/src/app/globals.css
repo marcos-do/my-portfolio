@@ -35,6 +35,10 @@ main p {
   animation: appear 2s linear 1.5s forwards;
 }
 
+.dark-theme img {
+  filter: invert();
+}
+
 @keyframes appear-transform {
   from {
     transform: translateX(-128px);
