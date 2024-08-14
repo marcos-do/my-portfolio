@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, ComponentProps } from "react";
-import styles from "./buttons.module.css";
+import styles from "./menus.module.css";
 import { DARK_THEME_CLASS, THEME_KEY } from "@/app/constants/theme";
 
 const updateThemeValue = (value: string) => {
@@ -12,7 +12,7 @@ const getThemeValue = () => {
   return localStorage.getItem(THEME_KEY);
 };
 
-const StickyThemeButton: React.FC<ComponentProps<'button'>> = () => {
+const StickyMenu: React.FC<ComponentProps<'div'>> = ({children}) => {
 
   const addDarkTheme = () => {
     const root = document.documentElement;
@@ -40,12 +40,11 @@ const StickyThemeButton: React.FC<ComponentProps<'button'>> = () => {
 
   return (
     <div
-      className={`${styles["theme-switch"]} absolute flex flex-col top-8 right-8`}
+      className={`${styles["theme-switch"]} absolute flex flex-col top-8 right-8 gap-2 rounded-3xl p-2`}
     >
-      <button onClick={changeToLightTheme}>Light</button>
-      <button onClick={changeToDarkTheme}>Dark</button>
+      {children}
     </div>
   );
 };
 
-export default StickyThemeButton;
+export default StickyMenu;

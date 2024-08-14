@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import StickyThemeButton from "./components/buttons/StickyThemeButton";
+import { Roboto } from "next/font/google";
 import "./globals.css";
-import { THEME_KEY } from "./constants/theme";
-import Script from "next/script";
+import StickyMenu from "./components/menus/StickyMenu";
+import SunIcon from "@/app/assets/sun_icon.svg";
+import MoonIcon from "@/app/assets/half_moon_icon.svg";
+import TextButton from "./components/buttons/TextButton";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Roboto({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio Marcos de Oliveira",
@@ -25,7 +27,14 @@ export default function RootLayout({
           if (localStorage.THEME)
           document.documentElement.classList.add(localStorage.THEME)
         </script>
-        <StickyThemeButton />
+        <StickyMenu>
+          <TextButton>
+            <Image src={SunIcon} alt="Light theme"></Image>
+          </TextButton>
+          <TextButton>
+            <Image src={MoonIcon} alt="Dark theme"></Image>
+          </TextButton>
+        </StickyMenu>
       </body>
     </html>
   );

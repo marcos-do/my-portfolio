@@ -1,20 +1,14 @@
-"use server"
-
-import { getDescription } from "@/app/services/descriptionService";
-
-async function getData(): Promise<any> {
-  const response = await getDescription();
-  return response.message
-}
+"use server";
 
 export default async function Home() {
-  const description = await getData()
-
   return (
     <main className="flex min-h-screen flex-col items-left p-24">
       <h1>Marcos de Oliveira</h1>
       <p className="p-12">
-        {description}
+        Ingeniero en informática. Me gustan los nuevos desafíos y aprender
+        nuevas tecnologías. Tengo facilidad para dar presentaciones y he
+        liderado hackatons en las que tuve que comunicarme en inglés. Aspiro a
+        ser líder técnico.
       </p>
     </main>
   );
