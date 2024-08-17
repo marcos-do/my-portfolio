@@ -27,7 +27,7 @@ const StickyMenu: React.FC<ComponentProps<"div">> = ({ children }) => {
 
   return (
     <div
-      className={`${styles["theme-switch"]} absolute flex flex-col top-8 right-8 gap-2 rounded-3xl p-2`}
+      className={`${styles["theme-switch"]} fixed flex flex-col top-8 right-8 gap-2 rounded-3xl p-2`}
     >
       <TextButton onClick={changeToLightTheme}>
         <Image src={SunIcon} alt="Light theme"></Image>

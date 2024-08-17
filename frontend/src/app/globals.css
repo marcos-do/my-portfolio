@@ -13,6 +13,10 @@
   --background-end-rgb: black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground-rgb);
   background: var(--background-end-rgb);
@@ -26,7 +30,7 @@ body {
 
 h1 {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2.5rem;
   animation: appear-transform linear 0.8s;
 }
 
