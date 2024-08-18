@@ -1,7 +1,9 @@
 "use server";
 
+import Image from "next/image";
 import ScreenContainer from "./components/containers/ScreenContainer";
 import BottomLink from "./components/links/BottomLink";
+import ArrowIcon from "@/app/assets/arrow_icon.svg";
 
 const Screen1 = () => {
   return (
@@ -12,7 +14,14 @@ const Screen1 = () => {
         like learning new technologies and seeking new challenges. I am good at
         making presentations and I led challenging hackatons.
       </p>
-      <BottomLink href="#skills" />
+      <BottomLink href="#skills">
+        <div className="flex gap-4">
+          <span>Scroll to see my technical skills</span>
+          <span className="image-animation">
+            <Image src={ArrowIcon} alt="" className="w-8 h-8" />
+          </span>
+        </div>
+      </BottomLink>
     </>
   );
 };
@@ -37,7 +46,7 @@ export default async function Home() {
       </ScreenContainer>
       <ScreenContainer
         id="skills"
-        className="flex min-h-screen flex-col items-left p-24 text-white bg-blue-900"
+        className="flex min-h-screen flex-col items-left p-24 blue"
       >
         <Screen2 />
       </ScreenContainer>

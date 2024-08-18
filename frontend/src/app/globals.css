@@ -6,11 +6,13 @@
   --foreground-rgb: black;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: white;
+  --background-blue: rgb(184, 191, 212);
 }
 
 .dark-theme {
   --foreground-rgb: white;
   --background-end-rgb: black;
+  --background-blue: rgb(30, 58, 138);
 }
 
 html {
@@ -20,6 +22,10 @@ html {
 body {
   color: var(--foreground-rgb);
   background: var(--background-end-rgb);
+}
+
+.blue {
+  background-color: var(--background-blue);
 }
 
 @layer utilities {
@@ -43,6 +49,10 @@ main p {
   filter: invert();
 }
 
+.image-animation {
+  animation: vertical-transform linear 1s infinite;
+}
+
 @keyframes appear-transform {
   from {
     transform: translateX(-128px);
@@ -60,5 +70,14 @@ main p {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes vertical-transform {
+  from {
+    transform: translateY(-16px);
+  }
+  to {
+    transform: translateY(16px);
   }
 }
