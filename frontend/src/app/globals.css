@@ -7,12 +7,14 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: white;
   --background-blue: rgb(184, 191, 212);
+  --background-green: rgb(197, 237, 198);
 }
 
 .dark-theme {
   --foreground-rgb: white;
   --background-end-rgb: black;
   --background-blue: rgb(30, 58, 138);
+  --background-green: rgb(18, 79, 20);
 }
 
 html {
@@ -26,6 +28,10 @@ body {
 
 .blue {
   background-color: var(--background-blue);
+}
+
+.green {
+  background-color: var(--background-green);
 }
 
 @layer utilities {

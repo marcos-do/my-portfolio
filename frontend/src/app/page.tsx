@@ -29,7 +29,16 @@ const Screen1 = () => {
 const Screen2 = () => {
   return (
     <>
-      <h1>Technical Skills</h1>
+      <h1>Backend technologies</h1>
+      <p className="p-12">Here are my technical skills...</p>
+    </>
+  );
+};
+
+const Screen3 = () => {
+  return (
+    <>
+      <h1>Frontend technologies</h1>
       <p className="p-12">Here are my technical skills...</p>
     </>
   );
@@ -46,9 +55,15 @@ export default async function Home() {
       </ScreenContainer>
       <ScreenContainer
         id="skills"
-        className="flex min-h-screen flex-col items-left p-24 blue"
+        className="flex min-h-screen flex-col items-left p-24 green"
       >
         <Screen2 />
+      </ScreenContainer>
+      <ScreenContainer
+        id="skills"
+        className="flex min-h-screen flex-col items-left p-24 blue"
+      >
+        <Screen3 />
       </ScreenContainer>
     </main>
   );
