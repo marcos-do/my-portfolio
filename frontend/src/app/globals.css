@@ -8,6 +8,8 @@
   --background-end-rgb: white;
   --background-blue: rgb(184, 191, 212);
   --background-green: rgb(197, 237, 198);
+  --background-cian: rgb(168, 210, 230);
+  --background-orange: rgb(245, 200, 122);
 }
 
 .dark-theme {
@@ -15,6 +17,8 @@
   --background-end-rgb: black;
   --background-blue: rgb(30, 58, 138);
   --background-green: rgb(18, 79, 20);
+  --background-cian: rgb(19, 70, 94);
+  --background-orange: rgb(145, 92, 7);
 }
 
 html {
@@ -32,6 +36,14 @@ body {
 
 .green {
   background-color: var(--background-green);
+}
+
+.cian {
+  background-color: var(--background-cian);
+}
+
+.orange {
+  background-color: var(--background-orange);
 }
 
 @layer utilities {
