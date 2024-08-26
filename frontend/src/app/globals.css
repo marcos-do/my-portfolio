@@ -71,6 +71,11 @@ main p {
   animation: vertical-transform linear 1s infinite;
 }
 
+* {
+  scrollbar-color: black transparent;
+  scrollbar-width: thin;
+}
+
 @keyframes appear-transform {
   from {
     transform: translateX(-128px);

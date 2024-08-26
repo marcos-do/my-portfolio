@@ -6,6 +6,8 @@ import BottomLink from "./components/links/BottomLink";
 import ArrowIcon from "@/app/assets/arrow_icon.svg";
 import useTech from "./hooks/tech";
 import { Tech, TechExperience } from "./types/tech";
+import TechCard from "./components/cards/TechCard";
+import TechCarousel from "./components/carousels/TechCarousel";
 
 const Screen1 = () => {
   return (
@@ -47,10 +49,19 @@ export default async function Home() {
             key={type}
             className={`flex min-h-screen flex-col items-left p-24 ${color}`}
           >
-            <h1>{type}</h1>
-            {elements.map(({ title }: TechExperience) => {
-              return <p key={title}>{title}</p>;
-            })}
+            <h1 className="mb-8">{type}</h1>
+            <TechCarousel>
+              {elements.map(({ title, description, years }: TechExperience) => {
+                return (
+                  <TechCard
+                    key={title}
+                    title={title}
+                    description={description}
+                    years={years}
+                  />
+                );
+              })}
+            </TechCarousel>
           </ScreenContainer>
         );
       })}
