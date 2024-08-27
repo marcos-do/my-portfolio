@@ -51,13 +51,14 @@ export default async function Home() {
           >
             <h1 className="mb-8">{type}</h1>
             <TechCarousel>
-              {elements.map(({ title, description, years }: TechExperience) => {
+              {elements.map(({ title, description, years, path }: TechExperience) => {
                 return (
                   <TechCard
                     key={title}
                     title={title}
                     description={description}
                     years={years}
+                    path={path}
                   />
                 );
               })}
