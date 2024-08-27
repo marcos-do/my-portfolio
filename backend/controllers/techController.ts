@@ -10,6 +10,7 @@ export const getTechnologies = (req: Request, res: Response) => {
         {
           title: "React",
           description: "Web development projects with React technology",
+          path: "react_icon.svg",
           years: 3,
         },
         {
