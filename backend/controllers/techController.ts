@@ -15,17 +15,20 @@ export const getTechnologies = (req: Request, res: Response) => {
         },
         {
           title: "Next.js",
-          description: "Web development projects with React technology",
+          description: "Web development projects with Next.js technology",
+          path: "nextjs_icon.svg",
           years: 3,
         },
         {
           title: "Tailwind",
           description: "Web development projects with React technology",
+          path: "tailwind_icon.svg",
           years: 3,
         },
         {
           title: "Angular",
           description: "Web development projects with React technology",
+          path: "angular_icon.svg",
           years: 3,
         },
       ],
@@ -37,16 +40,19 @@ export const getTechnologies = (req: Request, res: Response) => {
         {
           title: "Node.js",
           description: "Web development projects with React technology",
+          path: "node_icon.svg",
           years: 3,
         },
         {
           title: "Express",
           description: "Web development projects with React technology",
+          path: "express_icon.svg",
           years: 3,
         },
         {
           title: "NestJS",
           description: "Web development projects with React technology",
+          path: "nest_icon.svg",
           years: 3,
         },
         {
@@ -149,11 +155,6 @@ export const getTechnologies = (req: Request, res: Response) => {
       type: "Languages",
       color: "blue",
       elements: [
-        {
-          title: "EC2",
-          description: "Web development projects with React technology",
-          years: 3,
-        },
         {
           title: "JavaScript",
           description: "Web development projects with React technology",
